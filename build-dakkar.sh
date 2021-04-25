@@ -528,7 +528,7 @@ fi
 python=$(python -V | awk '{print $2}' | head -c2)
 if [[ $python == "3." ]]; then
     if [ ! -d .venv ]; then
-        virtualenv2 .venv
+        virtualenv -p python2 .venv
     fi
     . .venv/bin/activate
 fi
