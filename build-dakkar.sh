@@ -149,9 +149,9 @@ function get_rom_type() {
                 extra_make_options="WITHOUT_CHECK_API=true"
                 jack_enabled="true"
                 ;;
-            e-pie)
+            e-q)
                 mainrepo="https://gitlab.e.foundation/e/os/android/"
-                mainbranch="v1-pie"
+                mainbranch="v1-q"
                 localManifestBranch="android-10.0"
                 treble_generate="lineage"
                 extra_make_options="WITHOUT_CHECK_API=true"
