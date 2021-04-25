@@ -31,7 +31,7 @@ Syntax:
 
   $myname [-j 2] <rom type> <variant>...
 
-Options:
+Options:e-oreo
 
   -j   number of parallel make workers (defaults to $jobs)
 
@@ -50,6 +50,7 @@ ROM types:
   crdroid-oreo
   e-pie
   e-oreo
+  e-q
   havoc-pie
   komodo-pie
   lineage151
@@ -144,6 +145,14 @@ function get_rom_type() {
                 mainrepo="https://gitlab.e.foundation/e/os/android/"
                 mainbranch="v1-oreo"
                 localManifestBranch="android-8.1"
+                treble_generate="lineage"
+                extra_make_options="WITHOUT_CHECK_API=true"
+                jack_enabled="true"
+                ;;
+            e-pie)
+                mainrepo="https://gitlab.e.foundation/e/os/android/"
+                mainbranch="v1-pie"
+                localManifestBranch="android-10.0"
                 treble_generate="lineage"
                 extra_make_options="WITHOUT_CHECK_API=true"
                 jack_enabled="true"
